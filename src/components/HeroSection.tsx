@@ -45,10 +45,10 @@ export const HeroSection = ({ name, role, stats, profileImageUrl }: HeroSectionP
           <div>
             <h1 className="text-6xl lg:text-8xl font-black text-foreground leading-tight tracking-tight uppercase">
               HEY, I'M{" "}
-              <span className="block text-7xl lg:text-9xl mt-2">{name.split(' ')[0]}</span>
-              <span className="block text-7xl lg:text-9xl">{name.split(' ').slice(1).join(' ')}</span>
+              <span className="block text-7xl lg:text-9xl mt-2 text-foreground">{name.split(' ')[0]}</span>
+              <span className="block text-7xl lg:text-9xl text-foreground">{name.split(' ').slice(1).join(' ')}</span>
             </h1>
-            <p className="text-5xl lg:text-6xl font-signature text-primary mt-6 animate-fade-in">
+            <p className="text-5xl lg:text-6xl font-signature text-primary mt-6 animate-fade-in drop-shadow-lg">
               {role}
             </p>
           </div>
@@ -84,7 +84,7 @@ export const HeroSection = ({ name, role, stats, profileImageUrl }: HeroSectionP
           }}
         >
           <div className="relative">
-            <div className="w-80 h-96 lg:w-96 lg:h-[500px] rounded-3xl overflow-hidden border-4 border-border bg-gradient-to-br from-secondary to-muted shadow-2xl transform hover:scale-105 transition-transform duration-500">
+            <div className="w-80 h-96 lg:w-96 lg:h-[500px] rounded-3xl overflow-hidden border-4 border-primary/30 bg-gradient-to-br from-secondary to-muted shadow-2xl transform hover:scale-105 transition-transform duration-500 hover:shadow-[var(--shadow-glow)]">
               {profileImageUrl ? (
                 <img
                   src={profileImageUrl}
@@ -129,9 +129,9 @@ export const HeroSection = ({ name, role, stats, profileImageUrl }: HeroSectionP
           onClick={() => {
             document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
           }}
-          className="w-12 h-12 rounded-full border-2 border-border bg-background/50 backdrop-blur-sm flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all duration-300 group animate-bounce"
+          className="w-12 h-12 rounded-full border-2 border-primary bg-background/50 backdrop-blur-sm flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all duration-300 group animate-bounce shadow-[var(--shadow-elegant)]"
         >
-          <ArrowDown className="w-5 h-5 text-foreground group-hover:text-white" />
+          <ArrowDown className="w-5 h-5 text-primary group-hover:text-white" />
         </button>
       </div>
     </section>
